@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+body {
+    background: #1985a1;
+}
+
+.btn {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 13px;
+    border: 0;
+    background: #111;
+    color: #fff;
+    border-radius: 15px;
+    margin: 20rem auto 0 auto;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.menu.active .btn {
+    width: 200px;
+    transition: 0.5s;
+}
+
+.hamberger-menu span {
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.menu.active .hamberger-menu span {
+    width: 20px;
+    height: 3px;
+    margin-bottom: 3px;
+    transform: rotate(-40deg);
+    background: #fff;
+    display: block;
+    margin-top: 5px;
+    transition: 0.5s;
+}
+
+.menu.active .hamberger-menu span:nth-child(2) {
+    transform: rotate(40deg);
+    margin-top: -6;
+}
+
+.menu.active .hamberger-menu span:last-child {
+    opacity: 0;
+}
+
+.hamberger-menu span:last-child {
+    margin: 0;
+}
+
+.menu-list {
+    width: 200px;
+    background: #111;
+    margin: 15px auto 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.menu.active .menu-list {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.menu-list::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: #111;
+    display: block;
+    transform: translateY(-7px) translateX(-15px) rotate(-45deg);
+    float: right;
+}
+
+.menu-list li {
+    padding: 10px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.menu-list li:last-child {
+    list-style: none;
+}
+
+.menu-list li:hover a {
+    color: #1985a1;
+    transition: 0.3s;
+}
+
+.menu-list li a {
+    color: #fff;
+}
